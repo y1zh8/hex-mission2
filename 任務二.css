@@ -72,6 +72,12 @@ sub{
         max-width: 767px;
         margin: 0 auto;
     }
+}
+@media(max-width:375px){
+    .container{
+        max-width: 375px;
+        margin: 0 auto;
+    }
     
 }
 .header{
