@@ -72,6 +72,7 @@ sub{
         max-width: 767px;
         margin: 0 auto;
     }
+    
 }
 .header{
     height: 100vh;
@@ -133,7 +134,7 @@ sub{
     .header{
         background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/f70f00178a7f0baa31e9c01634303d8562cfe93a/chatTalker_images/bg_home_sm.svg);
         background-size: 334px auto;
-        background-position:center ;
+        background-position:center bottom;
     }
     .header-banner{
         display: flex;
@@ -142,6 +143,7 @@ sub{
     .header-banner img{
         max-width: 304px;
         height: auto;
+        margin: auto;
     }
     .header-banner h2{
         font-size: 32px;
@@ -179,8 +181,8 @@ sub{
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-right: 63px;
-    padding-left: 63px;
+    padding-right: 60px;
+    padding-left: 60px;
 }
 .platform-content img{
     max-width: 90px;
@@ -198,8 +200,8 @@ sub{
 }
 @media(max-width:767px){
     .platform h3{
-        margin-top: 60px;
         margin-bottom: 32px;
+        font-size: 28px;
     }
     .platform-content{
         display: flex;
@@ -238,64 +240,51 @@ sub{
 .character-card-item{
     width: 260px;
     height: 388px;
-    border-radius: 12 px;
+    border-radius: 12px;
     box-shadow: 0px 2px 10px #00000014;
     opacity: 1;
+    margin: 0 8px;
 }
 .character-card img{
-    width: 260px;
+    max-width: 260px;
+    border-radius: 12px 12px 0px 0px;
 }
+
 .character-card-content{
-    margin: 16px 24px 16px 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
+
 .character-card h4{
     color: #56C4C5;
     font-weight: bold;
+    margin-top: 16px;
     margin-bottom: 16px;
 }
+.character-card-content p{
+    max-width: 228px;
+}
+@media(max-width:767px){
+    .character h3{
+        font-size: 28px;
+    }
+    .character-card{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .character-card-item{
+        margin-bottom: 24px;
+    }
+}
+
+
 .feature-intro{
     display: flex;
-    justify-content: space-around;
+    flex-direction: row-reverse;
     margin-top: 100px;
-}
-.feature-intro-card{
-    display: flex;
-    flex-wrap: wrap;
-}
-.feature-intro-card-item{
-    width: 230px;
-    height: 280px;
-    box-shadow: 0px 2px 10px #00000014;
-    border-radius: 12px;
-    opacity: 1;
-    padding: 32px;
-    position: relative;
-    margin-right: 47px;
-    margin-bottom: 28px;
-}
-.feature-intro-card-item img{
-    position: absolute;
-    top: 49px;
-    left: 51px;
-    z-index: 3;
-}
-.circle{
-    width: 86px;
-    height: 86px;
-    background-color: white;
-    border-radius: 50%;
-    box-shadow: 0px 2px 10px #00000014;
-    opacity: 1;
-    position: absolute;
-    top: 32px;
-    left: 32px;
-    z-index: 1;
-}
-.feature-intro-card h4{
-    font-size: 18px;
-    font-weight: bold;
-    margin-top: 110px;
-    margin-bottom: 16px;
+    justify-content: space-between;
 }
 
 .feature-intro-title h3{
@@ -321,6 +310,70 @@ sub{
     background-color: #FFFFFF;
     border: #56C4C5 2px solid;
 }
+.feature-intro-card{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 556px;
+}
+.feature-intro-card-item{
+    width: 230px;
+    height: 280px;
+    box-shadow: 0px 2px 10px #00000014;
+    border-radius: 12px;
+    opacity: 1;
+    padding: 32px;
+    position: relative;
+    margin: 0 24px;
+    margin-bottom: 28px;
+}
+.feature-intro-card-item img{
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    z-index: 3;
+}
+.circle{
+    width: 86px;
+    height: 86px;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow: 0px 2px 10px #00000014;
+    opacity: 1;
+    position: absolute;
+    top: 32px;
+    left: 32px;
+    z-index: 1;
+}
+.feature-intro-card h4{
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 110px;
+    margin-bottom: 16px;
+}
+
+
+@media(max-width:767px){
+    .feature-intro{
+        display: flex;
+        flex-direction: column;
+        margin-top: 60px;
+    }
+    .feature-intro-title{
+        margin-bottom: 32px;
+        margin: 0 auto;
+    }
+    .feature-intro-title h3{
+        font-size: 28px;
+        margin-top: 28px;
+    }
+    .feature-intro-card{
+        display: flex;
+        flex-wrap: wrap;
+        margin: auto;
+        margin-top: 30px;
+    }
+
+}
 .comment{
     display: flex;
     flex-direction: column;
@@ -329,18 +382,33 @@ sub{
 .comment h3{
     font-size: 32px;
     font-weight: bold;
+    margin-top: 100px;
+    margin-bottom: 104px;
 }
-.comment-card{
+.comment-card-list{
     display: flex;
 }
-.comment-card img{
+.comment-card{
+    position: relative;
+}
+.userhead{
     width: 80px;
     height: 80px;
+    border-radius: 40px;
+    position: absolute;
+    left: 32px;
+    top: -44px;
 }
 .comment-item{
     width: 352px;
     height: 248px;
     padding: 48px 24px 32px 32px;
+    margin: 0 8px;
+    margin-bottom: 134px;
+    box-shadow: 0px 2px 10px #00000014;
+    border-radius: 12px;
+    opacity: 1;
+
 }
 .comment-item p{
     margin-bottom: 24px;
@@ -350,10 +418,27 @@ sub{
 .comment-item-title{
     display: flex;
     justify-content: space-between;
-
+    align-items: flex-end;
 }
+.comment-item-title img{
+    height: 16px;
+    display: flex;
+}
+@media(max-width:767px){
+    .comment h3{
+        font-size: 28px;
+        margin-top: 60px;
+        margin-bottom: 88px;
+    }
+    .comment-card-list{
+        display: flex;
+        flex-wrap: wrap;
 
-
+    }
+    .comment-card{
+        margin: auto;
+    }
+}
 
 
 
