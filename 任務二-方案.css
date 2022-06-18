@@ -85,6 +85,15 @@ h4{
         max-width: 767px;
         margin: 0 auto;
     }
+    h3{
+        font-size: 28px;
+    }
+}
+@media(max-width:375px){
+    .container{
+        max-width: 375px;
+        margin: 0 auto;
+    }
 }
 .header{
     position: relative;
@@ -141,7 +150,6 @@ h4{
 }
 @media(max-width:767px){
     .header{
-
         background-size: 80%;
     }
     .header-banner{
@@ -197,6 +205,7 @@ h4{
     .plan-number{
         flex-wrap: wrap;
         margin: 20px;
+        margin-top: 80px;
     }
     .plan-number a{
         width: 90px;
@@ -299,7 +308,7 @@ h4{
 }
 @media(max-width:767px){
     .plan-card-two{
-        margin: 0 auto;
+        margin: auto;
         display: flex;
         flex-wrap: wrap;
     }
@@ -322,13 +331,12 @@ h4{
     font-weight: bold;
 }
 .faq-q{
-
-    height: 58px;
+    max-width: 904px;
     box-shadow: 0px 2px 10px #00000014;
     border-radius: 12px;
     padding: 16px 32px;
     margin-bottom: 16px;
-    display: block;
+
 }
 
 .faq-q:hover{
@@ -336,7 +344,6 @@ h4{
     font-weight: bold;
 }
 .faq-q-c{
-    width: 904px;
     display: flex;
     justify-content: space-between;
     align-items: center;
